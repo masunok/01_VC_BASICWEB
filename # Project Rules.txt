@@ -1,0 +1,218 @@
+# Project Rules
+
+## 1. 프로젝트 개요
+- **목적**: AI 기반 SNS 마케팅 서비스를 제공하는 회사의 홍보용 원 페이지 웹사이트 개발
+- **타겟**: 소규모 비즈니스부터 대기업까지 SNS 마케팅 자동화를 원하는 고객
+- **목표**: 브랜드 인지도 향상 및 잠재 고객 획득
+
+## 2. 기술 스택 및 제약사항
+- **필수 기술**: HTML5, CSS3, Vanilla JavaScript (ES6+)
+- **금지사항**: 
+  - 외부 프레임워크 (React, Vue.js 등) 사용 금지
+  - 외부 라이브러리 최소화 (CDN을 통한 아이콘 폰트, 애니메이션 라이브러리만 허용)
+- **호환성**: 모던 브라우저 (Chrome 90+, Firefox 88+, Safari 14+, Edge 90+) 지원
+
+## 3. 페이지 구조 및 섹션 정의
+
+### 3.1 전체 구조
+```
+Header (Navigation)
+├── Hero Section
+├── About Section
+├── Services Section
+├── Features Section
+├── Portfolio/Case Studies Section
+├── Pricing Section
+├── Testimonials Section
+├── Contact Section
+└── Footer
+```
+
+### 3.2 각 섹션별 요구사항
+
+#### Hero Section
+- **목적**: 첫인상 강화 및 핵심 메시지 전달
+- **포함 요소**: 
+  - 회사 로고 및 브랜드명
+  - 메인 캐치프레이즈 (AI 기반 SNS 마케팅 자동화 강조)
+  - CTA 버튼 (무료 상담 신청, 서비스 둘러보기 등)
+  - 배경 애니메이션 또는 동적 요소
+
+#### About Section
+- **목적**: 회사 소개 및 차별화 포인트 설명
+- **포함 요소**:
+  - 회사 비전/미션
+  - AI 기술력 및 전문성 강조
+  - 간단한 통계 (고객 수, 성공률 등)
+
+#### Services Section
+- **목적**: 제공 서비스 상세 설명
+- **포함 요소**:
+  - AI 콘텐츠 생성
+  - 자동화된 포스팅 스케줄링
+  - 성과 분석 및 리포팅
+  - 타겟 오디언스 분석
+
+#### Features Section
+- **목적**: 기술적 장점 및 특징 나열
+- **포함 요소**:
+  - 다중 플랫폼 지원
+  - 실시간 분석 대시보드
+  - 개인화된 콘텐츠 추천
+  - 24/7 자동 운영
+
+#### Portfolio/Case Studies Section
+- **목적**: 성공 사례 및 실적 증명
+- **포함 요소**:
+  - 이전/이후 비교 차트
+  - 고객 성과 데이터
+  - 다양한 업종별 사례
+
+#### Pricing Section
+- **목적**: 가격 정책 및 플랜 소개
+- **포함 요소**:
+  - 3-4개 가격 티어
+  - 각 플랜별 기능 비교
+  - 무료 체험 옵션
+
+#### Testimonials Section
+- **목적**: 고객 후기 및 신뢰도 구축
+- **포함 요소**:
+  - 고객 프로필 및 후기
+  - 별점 또는 평가 지표
+  - 슬라이더 또는 캐러셀 형태
+
+#### Contact Section
+- **목적**: 연락처 정보 및 문의 양식
+- **포함 요소**:
+  - 연락 양식 (이름, 이메일, 메시지)
+  - 오피스 위치 (있는 경우)
+  - 소셜 미디어 링크
+
+## 4. 디자인 색상 팔레트
+
+### 4.1 Primary Colors
+- **주요 색상**: `#D95E32` (오렌지-레드) - 브랜딩 및 CTA 버튼
+- **보조 색상**: `#3EF09A` (네온 그린) - 강조 및 성공 표시
+- **액센트 색상**: `#C67DFA` (보라) - 그래디언트 및 특별 요소
+
+### 4.2 Secondary Colors
+- **밝은 노란색**: `#F7F24F` - 하이라이트 및 주의 끌기
+- **라임 그린**: `#C8DE02` - 부가 요소 및 아이콘
+
+### 4.3 색상 사용 가이드라인
+- **배경**: 어두운 그래디언트 (검은색 → 진한 보라) 또는 흰색 섹션 교대
+- **텍스트**: 
+  - 주요 텍스트: `#FFFFFF` (어두운 배경) / `#333333` (밝은 배경)
+  - 부제목: Primary/Secondary 색상 활용
+- **버튼**: Primary 색상 배경 + 흰색 텍스트
+- **링크**: `#3EF09A` (호버 시 `#C67DFA`)
+
+## 5. 반응형 디자인 요구사항
+
+### 5.1 Breakpoints
+- **Mobile**: 320px - 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: 1024px+
+
+### 5.2 반응형 규칙
+- Mobile-first 접근법 사용
+- 텍스트는 최소 16px (모바일)
+- 터치 타겟은 최소 44px × 44px
+- 가로 스크롤 절대 금지
+
+## 6. 성능 및 최적화 기준
+
+### 6.1 로딩 성능
+- **First Contentful Paint**: 3초 이하
+- **Total Page Size**: 2MB 이하
+- **이미지 최적화**: WebP 형식 우선, fallback으로 JPG/PNG
+
+### 6.2 사용자 경험
+- **부드러운 스크롤**: CSS `scroll-behavior: smooth` 적용
+- **애니메이션**: 60fps 유지, `transform` 및 `opacity` 속성 위주
+- **로딩 인디케이터**: 3초 이상 소요되는 요소에 적용
+
+## 7. SEO 및 접근성 요구사항
+
+### 7.1 SEO
+- 의미론적 HTML5 태그 사용 (`<header>`, `<section>`, `<article>`, `<footer>`)
+- 메타 태그 완전 구성 (title, description, keywords, og:tags)
+- Schema.org 마크업 적용 (LocalBusiness, Service)
+
+### 7.2 접근성 (WCAG 2.1 AA 준수)
+- alt 속성 모든 이미지에 적용
+- 색상 대비율 4.5:1 이상 유지
+- 키보드 내비게이션 지원
+- ARIA 레이블 적절히 사용
+
+## 8. 코드 작성 규칙
+
+### 8.1 HTML
+- DOCTYPE HTML5 사용
+- 의미론적 마크업 준수
+- 들여쓰기: 2 spaces
+- 속성값 따옴표 통일 (쌍따옴표)
+
+### 8.2 CSS
+- BEM 방법론 또는 컴포넌트 기반 클래스 네이밍
+- CSS Custom Properties (CSS 변수) 활용
+- Flexbox/Grid 레이아웃 우선 사용
+- 들여쓰기: 2 spaces
+
+### 8.3 JavaScript
+- ES6+ 문법 사용
+- 함수형 프로그래밍 지향
+- 이벤트 위임 패턴 활용
+- 주석: JSDoc 스타일
+
+## 9. 테스트 및 검증 기준
+
+### 9.1 브라우저 호환성
+- Chrome, Firefox, Safari, Edge 최신 2개 버전에서 테스트
+- 모바일: iOS Safari, Chrome Mobile에서 테스트
+
+### 9.2 성능 검증
+- Google PageSpeed Insights: 90점 이상
+- GTmetrix: Grade A
+- WebPageTest: First Byte Time 1초 이하
+
+### 9.3 기능 테스트
+- 모든 링크 및 버튼 동작 확인
+- 폼 제출 및 유효성 검사 테스트
+- 반응형 레이아웃 모든 기기에서 확인
+
+## 10. 배포 및 유지보수
+
+### 10.1 파일 구조
+```
+project-root/
+├── index.html
+├── css/
+│   ├── styles.css
+│   └── responsive.css
+├── js/
+│   ├── main.js
+│   └── animations.js
+├── images/
+│   ├── hero/
+│   ├── services/
+│   └── portfolio/
+└── assets/
+    ├── icons/
+    └── fonts/
+```
+
+### 10.2 압축 및 최적화
+- CSS/JS 파일 압축 (production 빌드)
+- 이미지 압축 및 최적화
+- GZIP 압축 활성화
+
+## Git 관리 규칙
+- **Git 명령어는 Github mcp 를 사용하여 수행**
+
+## 테스트 규칙
+- **puppeteer mcp 를 사용하여 브라우저 상에서 다양한 테스트를 수행**
+
+
+이 프로젝트 규칙을 따라 개발하면 전문적이고 효과적인 AI 기반 SNS 마케팅 회사 홍보 페이지를 제작할 수 있습니다.
